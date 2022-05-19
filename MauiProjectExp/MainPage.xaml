@@ -1,0 +1,53 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProjectExp.MainPage"
+             BackgroundColor="Black">
+             <!--BackgroundColor="{DynamicResource SecondaryColor}"-->
+
+    <ScrollView>
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+              Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+
+            <Label 
+                Text="Welcome to game collection"
+                Grid.Row="0"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+            <Button 
+                Text="2048"
+                FontAttributes="Bold"
+                FontSize="24"
+                Grid.Row="1"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnFirstGameStarted"
+                HorizontalOptions="Center" />
+            <Button 
+                Text="Game F"
+                FontAttributes="Bold"
+                FontSize="24"
+                Grid.Row="2"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnSecondGameStarted"
+                HorizontalOptions="Center" />
+            <Button 
+                Text="Untagle"
+                FontAttributes="Bold"
+                FontSize="24"
+                Grid.Row="3"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnThirdGameStarted"
+                HorizontalOptions="Center" />
+
+            <Image Grid.Row="4"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                WidthRequest="250"
+                HeightRequest="310"
+                HorizontalOptions="Center" />
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

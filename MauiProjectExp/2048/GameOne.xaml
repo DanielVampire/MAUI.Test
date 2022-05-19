@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProjectExp.GameOne"
+             Title="2@48"
+             BackgroundColor="DarkGray">
+    <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Vertical" x:Name="GameLevel">
+            <Button Text="4x4" FontSize="24" Clicked="Button_Clicked"/>
+            <Button Text="5x5" FontSize="24" Clicked="Button_Clicked"/>
+            <Button Text="6x6" FontSize="24" Clicked="Button_Clicked"/>
+        </StackLayout>
+
+        <ImageButton x:Name="UpArrow" Source="uparrow.png"  HorizontalOptions="Center" HeightRequest="50" WidthRequest="100" IsVisible="false" Clicked="UpArrow_Clicked"/>
+        <Grid x:Name="PlaceHolder" RowDefinitions="Auto" ColumnDefinitions="Auto, Auto, Auto" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="false" Padding="0" ColumnSpacing="0">
+            <ImageButton x:Name="LeftArrow" Grid.Column="0"  Source="uparrow.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Rotation="270" HeightRequest="50" WidthRequest="100" Clicked="LeftArrow_Clicked" Margin="0"/>
+            <Grid x:Name="Place" 
+                  Grid.Column="1"
+                  RowSpacing="10" 
+                  ColumnSpacing="10"
+                  VerticalOptions="CenterAndExpand"
+                  HorizontalOptions="CenterAndExpand"
+                  Margin="0">
+            </Grid>
+            <ImageButton x:Name="RightArrow" Grid.Column="2" Source="uparrow.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Rotation="90" HeightRequest="50" WidthRequest="100"  Clicked="RightArrow_Clicked" Margin="0"/>
+        </Grid>
+        <ImageButton x:Name="DownArrow" Source="uparrow.png" HorizontalOptions="Center" Rotation="180" HeightRequest="50" WidthRequest="100" IsVisible="false" Clicked="DownArrow_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

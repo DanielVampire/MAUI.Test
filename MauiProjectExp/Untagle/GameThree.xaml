@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProjectExp.GameThree"
+             Title="Untagle"
+             BackgroundColor="LightGray">
+    <Grid RowDefinitions="Auto">
+        <StackLayout Orientation="Vertical" x:Name="GameLevel" Grid.Row="0">
+            <Entry x:Name="sizeEntry" SemanticProperties.Description="Set vertices count" InputTransparent="False" Placeholder="Enter verteces count" PlaceholderColor="LightGray" Keyboard="Numeric" />
+            <Button Text="Submit" FontSize="24" Clicked="Button_Clicked"/>
+        </StackLayout>
+
+        <GraphicsView x:Name="paintFrame" Grid.Row="0" IsEnabled="False">
+
+        </GraphicsView>
+    </Grid>
+</ContentPage>

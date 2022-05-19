@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProjectExp.Game_F.GameTwo"
+             Title="F game"
+             BackgroundColor="Black">
+    <Grid RowDefinitions="Auto,Auto, 100">
+        <StackLayout Orientation="Vertical" x:Name="GameLevel" Grid.Row="0">
+            <Button Text="4x4" FontSize="24" Clicked="Button_Clicked_1"/>
+            <Button Text="5x5" FontSize="24" Clicked="Button_Clicked_1"/>
+            <Button Text="6x6" FontSize="24" Clicked="Button_Clicked_1"/>
+        </StackLayout>
+        
+        <Grid x:Name="Place" 
+                  Grid.Row="1"
+                  RowSpacing="10" 
+                  ColumnSpacing="10"
+                  VerticalOptions="CenterAndExpand"
+                  HorizontalOptions="CenterAndExpand"
+                  Margin="0">
+        </Grid>
+        <Label Text="{Binding Path=Score}" Grid.Row="2"></Label>
+    </Grid>
+</ContentPage>
